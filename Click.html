@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hehe</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* KARTU */
+.card{
+    position:relative;
+    width:540px;
+    height:330px;
+    background:#fffafa;
+    border-radius:42px;
+    overflow:hidden;
+}
+
+/* =========================
+   HATI
+========================= */
+
+.heart{
+    position:absolute;
+    left:50%;
+    top:35px;
+    transform:translateX(-50%);
+    width:330px;
+    height:190px;
+}
+
+/* setiap hati */
+.h{
+    position:absolute;
+    width:21px;
+    height:19px;
+    color:#d71945;
+    font-family:Arial,sans-serif;
+    font-size:21px;
+    line-height:19px;
+    text-align:center;
+
+    opacity:0;
+    transform:scale(0);
+
+    animation:
+        heartIn .22s cubic-bezier(.2,.8,.3,1) forwards;
+}
+
+/*
+   SUSUNAN PERSIS SEPERTI HATI DI VIDEO
+
+       ♥ ♥     ♥ ♥
+     ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥
+   ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ 
+   ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ 
+   ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ 
+     ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥
+       ♥ ♥ ♥ ♥ ♥ ♥ ♥
+         ♥ ♥ ♥ ♥ ♥
+           ♥ ♥ ♥
+             ♥
+*/
+
+/* BARIS 1 */
+
+.r1a{left:84px;top:0}
+.r1b{left:105px;top:0}
+.r1c{left:189px;top:0}
+.r1d{left:210px;top:0}
+
+/* BARIS 2 */
+.r2a{left:84px;top:18px}
+.r2b{left:105px;top:18px}
+.r2c{left:126px;top:18px}
+.r2d{left:231px;top:18px}
+.r2e{left:168px;top:18px}
+.r2f{left:189px;top:18px}
+.r2g{left:210px;top:18px}
+.r2h{left:63px;top:18px}
+  .r2i{left:63px;top:18px}
+  .r2j{left:42px;top:18px}
+
+/* BARIS 3 */
+   .r3m{left:42px;top:36px} 
+.r3a{left:63px;top:36px}
+.r3b{left:84px;top:36px}
+.r3c{left:105px;top:36px}
+.r3d{left:126px;top:36px}
+.r3e{left:147px;top:36px}
+.r3f{left:168px;top:36px}
+.r3g{left:189px;top:36px}
+.r3h{left:210px;top:36px}
+.r3i{left:231px;top:36px}
+.r3j{left:252px;top:36px}
+
+
+
+.r4a{left:63px;top:54px}
+.r4b{left:84px;top:54px}
+.r4c{left:105px;top:54px}
+.r4d{left:126px;top:54px}
+.r4e{left:147px;top:54px}
+.r4f{left:168px;top:54px}
+.r4g{left:189px;top:54px}
+.r4h{left:210px;top:54px}
+.r4i{left:231px;top:54px}
+.r4j{left:252px;top:54px}
+  
+  .r4l{left:42px;top:54px}
+
+
+.r5a{left:63px;top:72px}
+.r5b{left:84px;top:72px}
+.r5c{left:105px;top:72px}
+.r5d{left:126px;top:72px}
+.r5e{left:147px;top:72px}
+.r5f{left:168px;top:72px}
+.r5g{left:189px;top:72px}
+.r5h{left:210px;top:72px}
+.r5i{left:231px;top:72px}
+.r5j{left:252px;top:72px}
+
+  .r5l{left:42px;top:72px}
+
+.r6a{left:84px;top:90px}
+.r6b{left:105px;top:90px}
+.r6c{left:126px;top:90px}
+.r6d{left:147px;top:90px}
+.r6e{left:168px;top:90px}
+.r6f{left:189px;top:90px}
+.r6g{left:210px;top:90px}
+.r6h{left:231px;top:90px}
+
+
+  .r6m{left:63px;top:90px}
+
+/* BARIS 7 */
+.r7a{left:105px;top:108px}
+.r7b{left:126px;top:108px}
+.r7c{left:147px;top:108px}
+.r7d{left:168px;top:108px}
+.r7e{left:189px;top:108px}
+.r7f{left:210px;top:108px}
+
+.r7i{left:84px;top:108px}
+
+/* BARIS 8 */
+.r8a{left:126px;top:126px}
+.r8b{left:147px;top:126px}
+.r8c{left:168px;top:126px}
+.r8d{left:189px;top:126px}
+.r8e{left:105px;top:126px}
+
+/* BARIS 9 */
+.r9a{left:147px;top:144px}
+.r9b{left:168px;top:144px}
+.r9c{left:126px;top:144px}
+
+/* UJUNG */
+.r10{left:147px;top:162px}
+
+
+@keyframes heartIn{
+    0%{
+        opacity:0;
+        transform:scale(0);
+    }
+
+    70%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+/* =========================
+   KARAKTER DOODLE
+========================= */
+
+.person{
+    position:absolute;
+    left:55px;
+    bottom:50px;
+    width:120px;
+    height:115px;
+
+    opacity:0;
+    animation:personIn .8s ease forwards;
+}
+
+/* kepala */
+.head{
+    position:absolute;
+    left:10px;
+    top:2px;
+    width:65px;
+    height:65px;
+    border:2px solid #222;
+    border-radius:50%;
+    background:#fffafa;
+}
+
+/* badan */
+.body{
+    position:absolute;
+    left:27px;
+    top:58px;
+    width:34px;
+    height:48px;
+    border-left:2px solid #222;
+    border-right:2px solid #222;
+    border-bottom:2px solid #222;
+    border-radius:0 0 8px 8px;
+}
+
+/* kaki */
+
+
+/* mata */
+.eye{
+    position:absolute;
+    top:28px;
+    width:4px;
+    height:5px;
+    background:#222;
+    border-radius:50%;
+}
+
+.eye.left{left:23px}
+.eye.right{left:45px}
+
+/* mulut */
+.mouth{
+    position:absolute;
+    left:31px;
+    top:39px;
+    width:11px;
+    height:6px;
+    border-bottom:1.8px solid #222;
+    border-radius:50%;
+}
+
+/* pipi */
+.cheek{
+    position:absolute;
+    top:39px;
+    width:8px;
+    height:3px;
+    background:#f28c9d;
+    border-radius:50%;
+}
+
+.cheek.left{left:12px}
+.cheek.right{left:50px}
+
+/* tangan kiri */
+
+
+
+/* tangan kanan */
+.arm{
+    position:absolute;
+    left:56px;
+    top:70px;
+    width:55px;
+    height:18px;
+    border-top:2px solid #222;
+    transform:rotate(-22deg);
+    transform-origin:left center;
+}
+
+/* tangan kecil */
+.hand{
+    position:absolute;
+    right:-4px;
+    top:-8px;
+    width:17px;
+    height:14px;
+    border:2px solid #222;
+    border-radius:7px;
+}
+
+
+/* hati kecil di dekat tangan */
+.tiny{
+    position:absolute;
+    left:99px;
+    top:40px;
+    color:#ed7890;
+    font-size:16px;
+    transform:rotate(-10deg);
+}
+
+
+/* tulisan ibu */
+.ibu{
+    position:absolute;
+    left:137px;
+    bottom:80px;
+    font-family:cursive;
+    font-size:18px;
+    font-weight:bold;
+    color:#222;
+    transform:rotate(-8deg);
+}
+
+
+/* =========================
+   I LOVE YOU
+========================= */
+
+.loveText{
+    position:absolute;
+    left:50%;
+    bottom:34px;
+    transform:translateX(-50%);
+
+    font-family:"Times New Roman",serif;
+    font-size:31px;
+    font-weight:bold;
+    color:#d95a78;
+
+    opacity:0;
+    animation:textIn .8s ease forwards;
+
+    animation-delay:3.8s;
+}
+
+@keyframes personIn{
+    from{
+        opacity:0;
+        transform:translateX(-12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes textIn{
+    from{
+        opacity:0;
+        transform:translate(-50%,8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translate(-50%,0);
+    }
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media(max-width:600px){
+
+    .card{
+        width:94vw;
+        height:57vw;
+        max-height:330px;
+        border-radius:38px;
+    }
+
+    .heart{
+        transform:translateX(-50%) scale(.72);
+        transform-origin:top center;
+        top:18px;
+    }
+
+    .person{
+        transform:scale(.72);
+        transform-origin:bottom left;
+        left:5%;
+        bottom:9%;
+    }
+
+    .ibu{
+        left:25%;
+        bottom:23%;
+        font-size:15px;
+    }
+
+    .loveText{
+        font-size:25px;
+        bottom:9%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- KARAKTER -->
+    <div class="person">
+
+        <div class="head">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="cheek left"></div>
+            <div class="cheek right"></div>
+            <div class="mouth"></div>
+        </div>
+
+        <div class="body"></div>
+
+        <div class="leg left"></div>
+        <div class="leg right"></div>
+
+        <div class="handLeft"></div>
+
+        <div class="arm">
+            <div class="hand"></div>
+        </div>
+
+        <div class="tiny">♥</div>
+
+    </div>
+
+    <div class="ibu">davian</div>
+
+
+    <!-- HATI BESAR -->
+    <div class="heart">
+       
+        
+        <span class="h r1a">♥</span>
+        <span class="h r1b">♥</span>
+        <span class="h r1c">♥</span>
+        <span class="h r1d">♥</span>
+
+       
+      
+        <span class="h r2a">♥</span>
+        <span class="h r2b">♥</span>
+        <span class="h r2c">♥</span>
+        <span class="h r2d">♥</span>
+        <span class="h r2e">♥</span>
+        <span class="h r2f">♥</span>
+        <span class="h r2g">♥</span>
+        <span class="h r2h">♥</span>
+
+        <span class="h r3a">♥</span>
+        <span class="h r3b">♥</span>
+        <span class="h r3c">♥</span>
+        <span class="h r3d">♥</span>
+        <span class="h r3e">♥</span>
+        <span class="h r3f">♥</span>
+        <span class="h r3g">♥</span>
+        <span class="h r3h">♥</span>
+        <span class="h r3i">♥</span>
+        <span class="h r3j">♥</span>
+      <span class="h r3m">♥</span>
+
+
+
+        <span class="h r4a">♥</span>
+        <span class="h r4b">♥</span>
+        <span class="h r4c">♥</span>
+        <span class="h r4d">♥</span>
+        <span class="h r4e">♥</span>
+        <span class="h r4f">♥</span>
+        <span class="h r4g">♥</span>
+        <span class="h r4h">♥</span>
+        <span class="h r4i">♥</span>
+        <span class="h r4j">♥</span>
+        
+      <span class="h r4l">♥</span>
+      
+
+        <span class="h r5a">♥</span>
+        <span class="h r5b">♥</span>
+        <span class="h r5c">♥</span>
+        <span class="h r5d">♥</span>
+        <span class="h r5e">♥</span>
+        <span class="h r5f">♥</span>
+        <span class="h r5g">♥</span>
+        <span class="h r5h">♥</span>
+        <span class="h r5i">♥</span>
+        <span class="h r5j">♥</span>
+      
+      <span class="h r5l">♥</span>
+  
+
+        <span class="h r6a">♥</span>
+        <span class="h r6b">♥</span>
+        <span class="h r6c">♥</span>
+        <span class="h r6d">♥</span>
+        <span class="h r6e">♥</span>
+        <span class="h r6f">♥</span>
+        <span class="h r6g">♥</span>
+        <span class="h r6h">♥</span>
+      
+      
+      <span class="h r6m">♥</span>
+
+      
+        <span class="h r7a">♥</span>
+        <span class="h r7b">♥</span>
+        <span class="h r7c">♥</span>
+        <span class="h r7d">♥</span>
+        <span class="h r7e">♥</span>
+        <span class="h r7f">♥</span>
+        <span class="h r7i">♥</span>
+
+        <span class="h r8a">♥</span>
+        <span class="h r8b">♥</span>
+        <span class="h r8c">♥</span>
+        <span class="h r8d">♥</span>
+        <span class="h r8e">♥</span>
+
+        <span class="h r9a">♥</span>
+        <span class="h r9b">♥</span>
+        <span class="h r9c">♥</span>
+
+        <span class="h r10">♥</span>
+
+    </div>
+
+
+    <!-- TULISAN -->
+    <div class="loveText">
+        I Love nina
+    </div>
+
+</div>
+
+
+<script>
+
+/* Hati muncul dari atas ke bawah */
+const hearts = document.querySelectorAll(".h");
+
+hearts.forEach((heart,index)=>{
+
+    heart.style.animationDelay =
+        (1.1 + index * 0.045) + "s";
+
+});
+
+</script>
+
+</body>
+</html>
